@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import Head from "next/head";
 import { FaqItem } from "@/components/FaqItem";
 import { faqData } from "@/data/faq";

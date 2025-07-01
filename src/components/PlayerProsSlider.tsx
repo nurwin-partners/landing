@@ -79,7 +79,6 @@ const playerPros: PlayerPro[] = [
 export const PlayerProsSlider = () => {
   const controls = useAnimationControls();
   const [cards, setCards] = useState(playerPros);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const animationRef = useRef<NodeJS.Timeout | null>(null);
   const isPlayingRef = useRef(true);
@@ -102,7 +101,7 @@ export const PlayerProsSlider = () => {
       if (firstCard) newCards.push(firstCard);
       return newCards;
     });
-    setCurrentIndex((prev) => (prev + 1) % playerPros.length);
+    // currentIndex не використовується для рендерингу, тому видаляємо
   }, []);
 
   const moveToPrev = useCallback(() => {
@@ -112,9 +111,7 @@ export const PlayerProsSlider = () => {
       if (lastCard) newCards.unshift(lastCard);
       return newCards;
     });
-    setCurrentIndex(
-      (prev) => (prev - 1 + playerPros.length) % playerPros.length
-    );
+    // currentIndex не використовується для рендерингу, тому видаляємо
   }, []);
 
   const startAutoAnimation = useCallback(
@@ -133,7 +130,7 @@ export const PlayerProsSlider = () => {
             duration: Math.max(duration, 0.1), // Мінімум 0.1 секунди
             ease: "linear",
             repeat: 0,
-            onUpdate: (latest: any) => {
+            onUpdate: (latest: { x: number }) => {
               currentPositionRef.current = latest.x;
             },
           },
@@ -152,7 +149,7 @@ export const PlayerProsSlider = () => {
           }, 100);
           animationRef.current = timeoutId;
         }
-      } catch (error) {
+      } catch {
         // Анімація була зупинена
         console.log("Animation stopped");
       }
