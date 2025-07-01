@@ -98,7 +98,7 @@ export default function Terms() {
             </p>
             <p className="text-white text-sm font-semibold uppercase">
               1.4. For any questions regarding the Affiliate Program Agreement,
-              please contact us at partner.partner.support@nurwin.com.
+              please contact us at partner.support@nurwin.com.
             </p>
           </section>
 
@@ -542,10 +542,10 @@ export default function Terms() {
                 Email address for additional information
               </p>
               <a
-                href="mailto:partner.partner.support@nurwin.com"
+                href="mailto:partner.support@nurwin.com"
                 className="text-white text-[26px] max-md:text-[16px] font-semibold uppercase font-[Unbounded]"
               >
-                partner.partner.support@nurwin.com
+                partner.support@nurwin.com
               </a>
             </div>
             <div className="flex flex-col gap-4 max-md:gap-1 items-start max-md:items-center">
