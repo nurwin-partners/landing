@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { FaqItem } from "@/components/FaqItem";
 import { faqData } from "@/data/faq";
 import { AdvantagesSlider } from "@/components/AdvantagesSlider";
@@ -7,13 +6,23 @@ import Link from "next/link";
 import WomanBlock from "@/components/WomanBlock";
 import { SectionTitle } from "@/components/SectionTitle";
 import Header from "@/components/Header";
+import { NextSeo } from "next-seo";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Nurwin</title>
-      </Head>
+      <NextSeo
+        title={"Nurwin Partners"}
+        description={"Nurwin Partners"}
+        canonical={"https://nurwin.partners"}
+        openGraph={{
+          title: "Nurwin Partners",
+          description: "Nurwin Partners",
+          url: "https://nurwin.partners",
+          locale: "en_US",
+          site_name: "Nurwin Partners",
+        }}
+      />
 
       <Header />
       <main className="flex flex-col gap-[150px] max-md:gap-8 font-[Unbounded] items-center">
