@@ -323,10 +323,10 @@ export default function Home() {
                 telegram
               </p>
               <a
-                href="https://t.me/nurwin_support"
+                href="https://t.me/affiliate_nurwin"
                 className="text-white text-[26px] max-md:text-[16px] font-semibold uppercase font-[Unbounded]"
               >
-                @nurwin_support
+                @affiliate_nurwin
               </a>
             </div>
           </div>
