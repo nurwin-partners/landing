@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import { REGISTRATION_URL } from "@/data/consts";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 
@@ -21,10 +23,10 @@ export default function Terms() {
           <Link href="/">
             <img src="../assets/logo.svg" alt="logo" width={197} height={36} />
           </Link>
-          <div className="flex gap-5 font-[Inter] max-md:hidden">
+          <div className="flex gap-5 font-[Inter] max-xl:hidden">
             <Link
               href="/#partners"
-              className="text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase cursor-pointer"
+              className="text-[#B6C4E7] text-sm font-semibold leading-[22px] uppercase cursor-pointer hover:text-white transition-colors"
             >
               Nurwin Partners
             </Link>
@@ -60,11 +62,13 @@ export default function Terms() {
             </Link>
           </div>
           <div className="max-md:hidden">
-            <a className="button">My Account</a>
+            <a className="button" href={REGISTRATION_URL}>
+              My Account
+            </a>
           </div>
           <div className="max-md:block hidden">
             <a className="button-mobile">
-              <img src="../assets/account.svg" alt="account" />
+              <img src="/assets/account.svg" alt="account" />
             </a>
           </div>
         </div>
@@ -457,10 +461,7 @@ export default function Terms() {
                 to profit!
               </p>
             </div>
-            <a
-              className="button"
-              href="https://my.nurwin.partners/registration"
-            >
+            <a className="button" href={REGISTRATION_URL}>
               My Account
             </a>
           </div>
@@ -525,18 +526,16 @@ export default function Terms() {
                   journey to profit!
                 </p>
               </div>
-              <a
-                className="button"
-                href="https://my.nurwin.partners/registration"
-              >
+              <a className="button" href={REGISTRATION_URL}>
                 My Account
               </a>
             </div>
           </div>
         </div>
       </section>
+      <Footer />
 
-      <footer
+      {/* <footer
         className="bg-[url(../assets/bg-footer.svg)] h-[500px] flex items-end px-4"
         id="contacts"
       >
@@ -580,7 +579,7 @@ export default function Terms() {
             </Link>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 }

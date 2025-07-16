@@ -2,11 +2,12 @@ import { FaqItem } from "@/components/FaqItem";
 import { faqData } from "@/data/faq";
 import { AdvantagesSlider } from "@/components/AdvantagesSlider";
 import { PlayerProsSlider } from "@/components/PlayerProsSlider";
-import Link from "next/link";
 import WomanBlock from "@/components/WomanBlock";
 import { SectionTitle } from "@/components/SectionTitle";
 import Header from "@/components/Header";
 import { NextSeo } from "next-seo";
+import { REGISTRATION_URL } from "@/data/consts";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -25,34 +26,33 @@ export default function Home() {
       />
 
       <Header />
-      <main className="flex flex-col gap-[150px] max-md:gap-8 font-[Unbounded] items-center">
+      <main className="flex flex-col gap-[150px] max-xl:gap-8 font-[Unbounded] items-center">
         <section
-          className="flex flex-col max-w-[1920px] w-full h-[865px] max-md:h-[530px] items-center justify-center max-md:justify-start max-md:overflow-hidden"
+          className="flex flex-col max-w-[1920px] w-full h-[865px] max-xl:h-[530px] items-center justify-center max-xl:justify-start max-xl:overflow-hidden"
           id="partners"
         >
-          <div className="bg-[url(../assets/bg-section.png)] max-md:bg-[url(../assets/bg-section-mobile.png)] bg-cover max-md:bg-contain bg-center max-md:bg-top bg-no-repeat w-full flex justify-center items-end h-full max-md:-mt-12">
-            <div className="flex flex-col gap-12 max-md:gap-0 py-12 px-16 max-md:px-4 max-md:py-4 max-md:mx-4 items-center rounded-2xl bg-[rgba(0,0,0,_0.08)] backdrop-blur-[32px] shadow-[0px_0px_48px_0px_rgba(181,_194,_227,_0.16)_inset] border-2 border-white max-w-[936px] w-full relative">
-              <p className="text-[50px] font-semibold uppercase text-white text-center max-md:text-[17px]">
+          <div className="bg-[url(../assets/bg-section.png)] max-md:bg-[url(../assets/bg-section-mobile.png)] bg-cover max-md:bg-contain bg-center max-xl:bg-top bg-no-repeat w-full flex justify-center items-end h-full max-xl:-mt-12">
+            <div className="flex flex-col gap-12 max-xl:gap-0 py-12 px-16 max-xl:px-4 max-xl:py-4 max-xl:mx-4 items-center rounded-2xl bg-[rgba(0,0,0,_0.08)] backdrop-blur-[32px] shadow-[0px_0px_48px_0px_rgba(181,_194,_227,_0.16)_inset] border-2 border-white max-w-[936px] w-full relative">
+              <p className="text-[50px] font-semibold uppercase text-white text-center max-xl:text-[17px]">
                 MAXIMIZE YOUR PROFIT WITH NURWIN
               </p>
               <div className="flex flex-col justify-center items-center">
-                <p className="text-2xl/[72px] max-md:text-[11px]/[50px] font-semibold uppercase text-[#E7D6B6] text-center font-[Inter]">
+                <p className="text-2xl/[72px] max-xl:text-[11px]/[50px] font-semibold uppercase text-[#E7D6B6] text-center font-[Inter]">
                   Become an Affiliate Partner Today!
                 </p>
-                <a
-                  className="button"
-                  href="https://my.nurwin.partners/registration"
-                >
+                <a className="button" href={REGISTRATION_URL}>
                   My Account
                 </a>
               </div>
               <img
-                className="absolute -right-44 max-md:w-[40%] max-md:-right-8 max-md:-bottom-17"
+                // className="absolute -right-44 max-xl:w-[40%] max-xl:-right-8 max-xl:-bottom-17"
+                className="absolute -right-44 max-md:w-[40%] max-md:-right-8 max-md:-bottom-17 max-xl:-bottom-27 max-xl:-right-30"
                 src="assets/777-1.png"
                 alt="777-1"
               />
               <img
-                className="absolute -bottom-20 -left-48 max-md:w-[40%] max-md:-bottom-12 max-md:-left-11"
+                // className="absolute -bottom-20 -left-48 max-xl:w-[40%] max-xl:-bottom-12 max-xl:-left-11"
+                className="absolute -bottom-20 -left-48 max-md:w-[40%] max-md:-bottom-12 max-md:-left-11 max-xl:w-[30%] max-xl:-bottom-18 max-xl:-left-18"
                 src="assets/777-2.png"
                 alt="777-2"
               />
@@ -65,7 +65,7 @@ export default function Home() {
           id="benefits"
         >
           <SectionTitle>Nurwin benefits</SectionTitle>
-          <div className="flex gap-6 flex-wrap">
+          <div className="flex gap-6 flex-wrap justify-center">
             <div className="flex flex-col gap-8 justify-center items-center pb-8 max-w-[453px] rounded-2xl bg-[#25284E] w-full">
               <div className="bg-[url(../assets/bg-benefits.png)] bg-cover bg-center bg-no-repeat rounded-2xl max-h-[220px] w-full">
                 <img
@@ -159,10 +159,10 @@ export default function Home() {
         </section>
 
         <section
-          className="flex max-md:flex-col gap-16 pl-4 overflow-hidden max-w-[1448px] w-full items-center"
+          className="flex max-xl:flex-col gap-16 pl-4 overflow-hidden max-w-[1448px] w-full items-center"
           id="about-us"
         >
-          <h2 className="text-[41px] max-md:text-[21px] font-semibold uppercase text-gradient text-start max-md:text-center">
+          <h2 className="text-[41px] max-xl:text-[21px] font-semibold uppercase text-gradient text-start max-xl:text-center">
             UNIQUE
             <br />
             Advantages
@@ -179,7 +179,7 @@ export default function Home() {
 
         <section className="flex flex-col gap-8 px-4" id="cooperation-models">
           <SectionTitle>Cooperation Models</SectionTitle>
-          <div className="flex gap-6 flex-row max-md:flex-col items-start">
+          <div className="flex gap-6 flex-row max-xl:flex-col items-start max-xl:items-center">
             <div className="flex flex-col items-center justify-center gap-6 pb-8 rounded-2xl bg-[rgba(0,0,0,0.08)] max-w-[454px] w-full">
               <img
                 className="rounded-t-2xl"
@@ -257,7 +257,7 @@ export default function Home() {
                     </p>
                     <div className="w-full h-[1px] bg-[rgba(255,_255,_255,_0.16)]"></div>
                   </div>
-                  <div className="grid grid-cols-2 max-md:grid-cols-1 gap-x-20 gap-y-2 mb-8">
+                  <div className="grid grid-cols-2 max-xl:grid-cols-1 gap-x-20 gap-y-2 mb-8">
                     {section.items.map((item, index) => (
                       <FaqItem
                         key={`${sectionIndex}-${index}`}
@@ -268,7 +268,7 @@ export default function Home() {
                   </div>
                 </div>
               ))}
-            <div className="grid grid-cols-2 max-md:grid-cols-1 gap-x-20 gap-y-2">
+            <div className="grid grid-cols-2 max-xl:grid-cols-1 gap-x-20 gap-y-2">
               {faqData
                 .filter((section) => section.title !== "General")
                 .map((section, sectionIndex) => (
@@ -282,7 +282,7 @@ export default function Home() {
                       </p>
                       <div className="w-full h-[1px] bg-[rgba(255,_255,_255,_0.16)]"></div>
                     </div>
-                    <div className="grid grid-cols-1 max-md:grid-cols-1 gap-x-20 gap-y-2 mb-8">
+                    <div className="grid grid-cols-1 max-xl:grid-cols-1 gap-x-20 gap-y-2 mb-8">
                       {section.items.map((item, index) => (
                         <FaqItem
                           key={`${sectionIndex}-${index}`}
@@ -298,51 +298,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer
-        className="bg-[url(../assets/bg-footer.svg)] h-[500px] flex items-end px-4"
-        id="contacts"
-      >
-        <div className="w-full max-w-[1114px] mx-auto mb-16 max-md:mb-8">
-          <p className="text-[32px]/[74px] font-semibold uppercase text-gradient font-[Unbounded] max-md:text-center">
-            CONTACTS
-          </p>
-          <div className="flex gap-[88px] max-md:gap-6 mt-[33px] max-md:mt-6 mb-[86px] max-md:mb-11 flex-wrap max-md:flex-col">
-            <div className="flex flex-col gap-4 max-md:gap-1 items-start max-md:items-center">
-              <p className="text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter]">
-                Email address for additional information
-              </p>
-              <a
-                href="mailto:partner.support@nurwin.com"
-                className="text-white text-[26px] max-md:text-[16px] font-semibold uppercase font-[Unbounded]"
-              >
-                partner.support@nurwin.com
-              </a>
-            </div>
-            <div className="flex flex-col gap-4 max-md:gap-1 items-start max-md:items-center">
-              <p className="text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter]">
-                telegram
-              </p>
-              <a
-                href="https://t.me/affiliate_nurwin"
-                className="text-white text-[26px] max-md:text-[16px] font-semibold uppercase font-[Unbounded]"
-              >
-                @affiliate_nurwin
-              </a>
-            </div>
-          </div>
-          <div className="flex flex-row gap-10 max-md:flex-col-reverse max-md:items-center">
-            <p className="text-[#B6C4E7] text-sm font-semibold uppercase font-[Inter] max-md:text-center">
-              ALL RIGHTS RESERVED ©2025
-            </p>
-            <Link
-              className="text-[#E7D6B6] text-sm font-semibold uppercase font-[Inter] max-md:text-center"
-              href="/terms/index.html"
-            >
-              terms and conditions
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

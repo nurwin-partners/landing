@@ -7,8 +7,7 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages",
-		"deploy-orphan": "next build && cp CNAME out/CNAME && cp google12c92315e55d13f4.html out/google12c92315e55d13f4.html && touch out/.nojekyll && git checkout --orphan gh-pages-temp && git rm -rf . && git clean -fxd && cp -r out/* . && git add . && git commit -m \"Deploy $(date '+%Y-%m-%d %H:%M:%S')\" && git push origin gh-pages-temp:gh-pages --force && git checkout main && git branch -D gh-pages-temp"
+		"deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
 	},
 	"dependencies": {
 		"framer-motion": "^12.0.6",

@@ -1,3 +1,5 @@
+import { REGISTRATION_URL } from "@/data/consts";
+
 export default function WomanBlock() {
   return (
     <>
@@ -15,10 +17,7 @@ export default function WomanBlock() {
                 to profit!
               </p>
             </div>
-            <a
-              className="button"
-              href="https://my.nurwin.partners/registration"
-            >
+            <a className="button" href={REGISTRATION_URL}>
               My Account
             </a>
           </div>
@@ -83,10 +82,7 @@ export default function WomanBlock() {
                   journey to profit!
                 </p>
               </div>
-              <a
-                className="button"
-                href="https://my.nurwin.partners/registration"
-              >
+              <a className="button" href={REGISTRATION_URL}>
                 My Account
               </a>
             </div>
